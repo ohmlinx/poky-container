@@ -37,6 +37,15 @@ RUN userdel -r yoctouser && \
         /usr/bin/restrict_useradd.sh && \
     echo "#include /etc/sudoers.usersetup" >> /etc/sudoers
 
+#Add dotnet core support
+RUN \
+    wget -q https://packages.microsoft.com/config/ubuntu/16.04/packages-microsoft-prod.deb && \
+    dpkg -i packages-microsoft-prod.deb && \
+    apt-get install -y apt-transport-https && \
+    apt-get update && \
+    apt-get install -y libicu-dev dotnet-runtime-2.1 dotnet-runtime-deps-2.1 aspnetcore-runtime-2.1 && \
+    apt-get install -y dotnet-sdk-2.1
+
 USER usersetup
 ENV LANG=en_US.UTF-8
 
