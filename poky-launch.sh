@@ -14,6 +14,7 @@
 # with this program; if not, write to the Free Software Foundation, Inc.,
 workdir=$1
 shift
+sudo chown -R pokyuser:pokyuser /home/pokyuser/
 cd $workdir
 if [ $# -gt 0 ]; then
     exec bash -c "$*"
