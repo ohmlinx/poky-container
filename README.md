@@ -44,7 +44,7 @@ point.
     to run a container for the first time would be:
 
     ```
-    docker run --rm -it -v /home/myuser/mystuff:/workdir ohmlinx/poky-container --workdir=/workdir
+    docker run --rm -it -v /home/myuser/mystuff:/workdir -v ~/.ssh:/home/pokyuser/.ssh ohmlinx/poky-container --workdir=/workdir
     ```
     
   * **Windows/Mac**
