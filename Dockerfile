@@ -46,6 +46,10 @@ RUN \
     apt-get install -y libicu-dev dotnet-runtime-2.1 dotnet-runtime-deps-2.1 aspnetcore-runtime-2.1 && \
     apt-get install -y dotnet-sdk-2.1
 
+#Variscite DART-MX8M Yocto Morty Host Dependencies
+RUN \
+    apt-get install -y zlib1g-dev
+
 USER usersetup
 ENV LANG=en_US.UTF-8
 
