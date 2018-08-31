@@ -46,6 +46,9 @@ point.
     ```
     docker run --rm -it -v /home/myuser/mystuff:/workdir -v ~/.ssh:/home/pokyuser/.ssh ohmlinx/poky-container --workdir=/workdir
     ```
+
+    Note: To clone private git repos, it is necessary to mount the ssh directory of your host computer as a volume.
+
     
   * **Windows/Mac**
   
