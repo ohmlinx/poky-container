@@ -50,6 +50,9 @@ RUN \
 RUN \
     apt-get install -y zlib1g-dev
 
+#Misc. Creature Comforts
+RUN apt-get install -y nano
+
 USER usersetup
 ENV LANG=en_US.UTF-8
 
