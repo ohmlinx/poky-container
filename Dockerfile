@@ -50,6 +50,10 @@ RUN \
 RUN \
     apt-get install -y zlib1g-dev
 
+#Debian Development
+RUN \
+    apt-get install -y debootstrap
+
 #Misc. Creature Comforts
 RUN apt-get install -y nano
 
