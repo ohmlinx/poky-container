@@ -52,7 +52,7 @@ RUN \
 
 #Debian Development
 RUN \
-    apt-get install -y debootstrap
+    apt-get install -y debootstrap bc lzop
 
 #Misc. Creature Comforts
 RUN apt-get install -y nano
