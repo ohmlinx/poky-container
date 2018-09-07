@@ -52,7 +52,7 @@ RUN \
 
 #Debian Development
 RUN \
-    apt-get install -y debootstrap bc lzop
+    apt-get install -y debootstrap bc lzop bison flex libssl-dev
 
 #Misc. Creature Comforts
 RUN apt-get install -y nano
