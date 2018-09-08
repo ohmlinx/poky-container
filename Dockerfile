@@ -55,7 +55,7 @@ RUN \
     apt-get install -y debootstrap bc lzop bison flex libssl-dev kmod qemu-user-static
 
 #Misc. Creature Comforts
-RUN apt-get install -y nano
+RUN apt-get install -y nano vim
 
 USER usersetup
 ENV LANG=en_US.UTF-8
