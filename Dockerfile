@@ -53,7 +53,8 @@ RUN \
 #Debian Development
 RUN \
     apt-get install -y debootstrap bc lzop bison flex libssl-dev kmod \
-    qemu binfmt-support qemu-user-static
+    qemu binfmt-support qemu-user-static && \
+    update-binfmts --enable
 
 #Misc. Creature Comforts
 RUN apt-get install -y nano vim
