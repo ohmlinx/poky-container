@@ -57,6 +57,10 @@ RUN \
 #Misc. Creature Comforts
 RUN apt-get install -y nano vim
 
+#Support running 32bit binaries
+RUN dpkg --add-architecture i386 && sudo apt-get update && \
+  apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386
+
 USER usersetup
 ENV LANG=en_US.UTF-8
 
