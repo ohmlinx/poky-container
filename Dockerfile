@@ -63,6 +63,9 @@ RUN apt-get install -y nano vim
 RUN dpkg --add-architecture i386 && sudo apt-get update && \
   apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386
 
+#Support ./configure
+apt-get install -y automake autoconf libtool
+
 USER usersetup
 ENV LANG=en_US.UTF-8
 
