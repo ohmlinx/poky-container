@@ -57,7 +57,7 @@ RUN \
     update-binfmts --enable
 
 #Misc. Creature Comforts
-RUN apt-get install -y nano vim
+RUN apt-get install -y nano vim curl
 
 #Support running 32bit binaries
 RUN dpkg --add-architecture i386 && sudo apt-get update && \
