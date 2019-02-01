@@ -66,6 +66,9 @@ RUN dpkg --add-architecture i386 && sudo apt-get update && \
 #Support ./configure
 RUN apt-get install -y automake autoconf libtool
 
+#Allow PPA using add-apt-repository 
+RUN apt-get install -y software-properties-common
+
 USER usersetup
 ENV LANG=en_US.UTF-8
 
